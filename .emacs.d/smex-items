@@ -1,16 +1,17 @@
 
 ;; ----- smex-history -----
 (
+ magit-pull
  cd
  5x5
  arp
  dbx
  dig
  erc
- ert
 )
 
 ;; ----- smex-data -----
 (
  (cd . 1)
+ (magit-pull . 1)
 )
