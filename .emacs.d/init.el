@@ -38,7 +38,7 @@
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(package-selected-packages
    (quote
-    (tide magit company-lsp company-anaconda company-ebdb xah-elisp-mode ## symex counsel ivy evil-leader))))
+    (evil-magit tide magit company-lsp company-anaconda company-ebdb xah-elisp-mode ## symex counsel ivy evil-leader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,7 +68,14 @@
 			 company-yasnippet
 			 company-abbrev
 			 company-dabbrev))
-(define-key 'company-active-map (kbd "TAB") 'company-complete)
+(define-key company-active-map (kbd "TAB") 'company-complete)
 
 (require 'company-lsp)
 (add-to-list 'company-backends 'company-lsp)
+(require 'flycheck)
+(add-hook 'prog-mode-hook 'flycheck-mode)
+(require 'magit)
+(evil-leader/set-key
+  "m" 'magit-status)
+(require 'evil-magit)
+(evil-magit-init)
