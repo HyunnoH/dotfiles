@@ -1,17 +1,22 @@
 
 ;; ----- smex-history -----
 (
+ treemacs-find-file
+ treemacs-peek
+ treemacs-mode
+ treemacs
+ package-install
  magit-pull
  cd
- 5x5
- arp
- dbx
- dig
- erc
 )
 
 ;; ----- smex-data -----
 (
  (cd . 1)
  (magit-pull . 1)
+ (package-install . 3)
+ (treemacs . 3)
+ (treemacs-mode . 1)
+ (treemacs-peek . 1)
+ (treemacs-find-file . 1)
 )

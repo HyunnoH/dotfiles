@@ -47,7 +47,7 @@
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(package-selected-packages
    (quote
-    (evil-magit tide magit company-lsp company-anaconda company-ebdb xah-elisp-mode ## symex counsel ivy evil-leader))))
+    (treemacs-evil evil-magit tide magit company-lsp company-anaconda company-ebdb xah-elisp-mode ## symex counsel ivy evil-leader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -90,3 +90,4 @@
 (evil-magit-init)
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+

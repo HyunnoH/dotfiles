@@ -3,6 +3,15 @@
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-refresh-contents)
+(require 'doom-themes)
+
+(setq doom-themes-enable-bold t
+      doom-themes-enable-italic t
+      doom-one-brighter-modeline nil
+      doom-one-brighter-comments nil)
+
+(load-theme 'doom-one t)
+
 (require 'ivy) (ivy-mode 1)
 (require 'evil)
 (evil-mode 1)
@@ -79,3 +88,6 @@
   "m" 'magit-status)
 (require 'evil-magit)
 (evil-magit-init)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
