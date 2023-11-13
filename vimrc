@@ -1,8 +1,10 @@
-call plug#begin()
+call plug#begin(expand('~/.vim/plugged'))
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
+Plug 'nordtheme/vim'
 call plug#end()
 
+let g:airline_powerline_fonts = 1
 filetype plugin indent on
 
 set number
@@ -17,6 +19,6 @@ set nolinebreak
 set history=1000
 set ruler
 
-if has ("syntax")
-  syntax on
-endif
+syntax enable
+
+colorscheme nord
