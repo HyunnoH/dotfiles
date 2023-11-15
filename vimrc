@@ -1,6 +1,7 @@
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'nordtheme/vim'
 call plug#end()
 
