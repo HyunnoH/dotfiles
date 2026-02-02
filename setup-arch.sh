@@ -9,23 +9,17 @@ cd yay-bin
 makepkg -si
 
 # Install additional packages
-yay -S tmux vim zsh
-
-# Install oh-my-zsh with additional plugins
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# Install powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+yay -S tmux vim zsh starship
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 cp vimrc ~/.vimrc
 cp tmux.conf ~/.tmux.conf
-cp zshrc ~/.zshrc
+cp .zshrc ~/.zshrc
+
+mkdir -p ~/.config
+starship preset gruvbox-rainbow -o ~/.config/starship.toml 
 
 # Set git credentials
 git config --global user.name "HyunnoH"
