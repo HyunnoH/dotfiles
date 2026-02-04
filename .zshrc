@@ -1,10 +1,12 @@
 # zmodload zsh/zprof
 
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=100000000
 export SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY
 setopt autocd
 autoload -U compinit; compinit
+zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # 캐시 파일(.zcompdump)이 24시간보다 오래되었을 때만 갱신, 아니면 캐시 사용(-C)
 # if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
